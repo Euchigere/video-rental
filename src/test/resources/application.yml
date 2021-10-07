@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate: org.hibernate.dialect.H2Dialect
+
+app:
+  rent:
+    rates: "{
+      'regular' : '10',
+      'children' : '8',
+      'newRelease' : '15'
+    }"
