@@ -2,14 +2,12 @@ package com.emmanuelc.videorental.domain.models;
 
 import com.emmanuelc.videorental.domain.models.enumerations.Genre;
 import com.emmanuelc.videorental.domain.models.enumerations.VideoType;
-import com.emmanuelc.videorental.utils.GenreListConverter;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Getter
 @Setter
@@ -27,6 +25,6 @@ public abstract class Video extends BaseModel {
     @NotNull protected VideoType type;
 
     @Column(nullable = false)
-    @Convert(converter = GenreListConverter.class)
-    @NotNull private List<Genre> genre;
+    @Enumerated(EnumType.STRING)
+    @NotNull private Genre genre;
 }
