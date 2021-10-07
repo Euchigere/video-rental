@@ -20,6 +20,7 @@ public class RentDetailsServiceImpl implements RentDetailsService {
 
     static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
 
+    // rates are configurable from the properties file
     @Value("#{${app.rent.rates}}") Map<String, Integer> ratesMap;
 
     private final RentDetailsRepo rentDetailsRepo;
