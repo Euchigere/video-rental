@@ -1,7 +1,7 @@
 # Video Rental App
 
 ## Getting Started
-This application runs on Java 11
+You need Java 11 to run this application
 
 To start app run the following command `./gradlew bootrun`
 
